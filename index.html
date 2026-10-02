@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bianca · Portfólio</title>
+  <meta name="description" content="Portfólio da Bianca: quem sou, meus projetos, meus planos e contatos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <!-- aplica o tema salvo antes da página aparecer (evita piscar) -->
+  <script>
+    try { if (localStorage.getItem("tema") === "escuro") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- ===== Topo / navegação ===== -->
+  <header class="topo">
+    <a class="logo" href="#inicio">Bianca Uchôas Fernandes<span>.</span></a>
+    <nav aria-label="Seções">
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#futuro">Futuro</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <!-- switch de tema: sol (claro) à esquerda, lua (escuro) à direita -->
+    <div class="tema">
+      <svg class="tema-icone" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2"/>
+        <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/>
+      </svg>
+      <button class="tema-switch" id="tema-switch" type="button" role="switch" aria-checked="false" aria-label="Modo escuro">
+        <span class="tema-bolinha"></span>
+      </button>
+      <svg class="tema-icone" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 1. Introdução ===== -->
+    <section class="intro" id="inicio">
+      <div class="intro-texto">
+        <p class="rotulo">💜 Olá! Bem vindo(a)!</p>
+        <h1>Eu sou a <em>Bianca</em>, e sou uma desenvolvedora de apps android e web sites!</h1>
+        <p class="lead">
+          <!-- TROQUE: escreva aqui sua apresentação -->
+          Sou estudante de informática construindo projetos de verdade. Gosto de interfaces bonitas, organizadas e
+          fáceis de usar. Aqui você encontra um pouco de quem eu sou e do que eu ando fazendo (:
+        </p>
+        <div class="acoes">
+          <a class="botao" href="#projetos">Ver meus projetos</a>
+          <a class="botao botao-leve" href="#contato">Falar comigo</a>
+        </div>
+      </div>
+
+      <!-- Deck de polaroids: troque as fotos em img/ e as legendas abaixo -->
+      <div class="deck-area">
+        <div class="deck" id="deck" aria-live="polite">
+          <figure class="polaroid" data-pos="centro">
+            <img src="img/EU.png" alt="Foto 1 da Bianca">
+            <figcaption>Eu, Bianca! </figcaption>
+          </figure>
+          <figure class="polaroid" data-pos="direita">
+            <img src="img/mia.png" alt="Foto 2 da Bianca">
+            <figcaption>minha cachorrinha </figcaption>
+          </figure>
+          <figure class="polaroid" data-pos="esquerda">
+            <img src="img/amigos.png" alt="Foto 3 da Bianca">
+            <figcaption>memória com meus amigos da UniVap</figcaption>
+          </figure>
+        </div>
+        <div class="deck-controles">
+          <button class="seta seta-voltar" id="seta-voltar" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L18 12 L8 19 Z"/></svg></button>
+          <button class="seta" id="seta-avancar" type="button" aria-label="Próxima foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L18 12 L8 19 Z"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Experiências e educação ===== -->
+    <!-- TROQUE: cada <li> é um item. Copie um <li> inteiro para adicionar mais. -->
+    <section class="secao" id="trajetoria">
+      <div class="secao-cabeca">
+        <p class="rotulo">Minha trajetória</p>
+        <h2>🎓 Educação e experiências</h2>
+      </div>
+      <div class="trajetoria">
+        <div class="trilha">
+          <h3 class="trilha-titulo">Educação</h3>
+          <ol class="linha-tempo">
+            <li>
+              <span class="periodo">02/2023 – atual</span>
+              <h4>Técnico em Informática</h4>
+              <p class="local">Univap Centro · SJC</p>
+              <p>Programação, desenvolvimento web e apps Android. Agora estou fazendo meu TCC.</p>
+            </li>
+            <li>
+              <span class="periodo">01/2023 – 12/2026</span>
+              <h4>Ensino Médio</h4>
+              <p class="local">Univap Centro · SJC</p>
+              <p>Estou prestes a me formar oficialmente no Colégio Técnico Antônio Teixeira Fernandes.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="trilha">
+          <h3 class="trilha-titulo">Experiências</h3>
+          <ol class="linha-tempo">
+            <li>
+              <span class="periodo">2023</span>
+              <h4>GameJam</h4>
+              <p class="local">FullSail &amp; UniVap</p>
+              <p>Ganhamos honra ao mérito pela ideia de jogo apresentada em um concurso de jogos da FullSail.</p>
+            </li>
+            <li>
+              <span class="periodo">2025</span>
+              <h4>Curso de Excel</h4>
+              <p class="local">Udemy</p>
+              <p>fiz uma aula completa de Excel</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Projetos (vindos do GitHub) ===== -->
+    <section class="secao" id="projetos">
+      <div class="secao-cabeca">
+        <p class="rotulo">Direto do meu GitHub</p>
+        <h2>🖥️ Projetos </h2>
+        <p class="secao-sub" id="projetos-status">Carregando projetos…</p>
+      </div>
+      <div class="projetos" id="lista-projetos"></div>
+    </section>
+
+    <!-- ===== 4. O que pretendo fazer / ser ===== -->
+    <section class="secao" id="futuro">
+      <div class="secao-cabeca">
+        <p class="rotulo">Para onde estou indo</p>
+        <h2>🌟 O que eu quero ser</h2>
+        <p class="secao-sub">
+          Quero me tornar uma engenheira da computação, com objetivo mais focado na programação, porém quero ter o conhecimento amplo para se for necessário atuar na parte de hardwares também.
+        </p>
+      </div>
+      <ol class="caminho">
+        <li>
+          <span class="etapa">Agora</span>
+          <h3>Concluir meu TCC</h3>
+          <p>Conseguir meu diploma em ensino técnico em informática que me prepara pro mercado de trabalho e estágios.</p>
+        </li>
+        <li>
+          <span class="etapa">Próximo passo</span>
+          <h3>Fculdade e estágio</h3>
+          <p>Conseguir em engenharia da computação e me especializar principalmente na programação.</p>
+        </li>
+        <li>
+          <span class="etapa">Objetivos do futuro</span>
+          <h3>especialização em Cybersegurança</h3>
+          <p>Tenho vontade de aprender e trabalhar na parte de cybersegurança após a faculdade, sem abandonar os sites!</p>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- ===== 5. Contato ===== -->
+  <footer class="contato" id="contato">
+    <div class="contato-cabeca">
+      <p class="rotulo">Vamos conversar?</p>
+      <h2>📞 Meus Contatos</h2>
+
+    </div>
+
+    <!-- TROQUE: seus dados reais em cada href, data-copiar e texto.
+         LinkedIn e GitHub: só o botão "Visitar!" abre o seu perfil, numa nova aba. -->
+    <ul class="contatos">
+      <li class="perfil">
+        <span class="contato-tipo">LinkedIn</span>
+        <span class="contato-valor">linkedin.com/in/bianca-uchôas-fernandes-39810630b</span>
+        <a class="visitar" href="https://www.linkedin.com/in/bianca-uchôas-fernandes-39810630b" target="_blank" rel="noopener">Visitar!</a>
+      </li>
+      <li>
+        <span class="contato-tipo">E-mail</span>
+        <a class="contato-valor" href="mailto:biancauchoas11@gmail.com">biancauchoas11@gmail.com</a>
+        <button class="copiar" type="button" data-copiar="biancauchoas11@gmail.com">Copiar</button>
+      </li>
+      <li>
+        <span class="contato-tipo">Telefone / Whatssap</span>
+        <a class="contato-valor" href="tel:+5512981832227">+55 (12) 98183-2227</a>
+        <button class="copiar" type="button" data-copiar="+55 (12) 98183-2227">Copiar</button>
+      </li>
+      <li class="perfil">
+        <span class="contato-tipo">GitHub</span>
+        <span class="contato-valor" id="texto-github">github.com/biancaufworks-bit</span>
+        <a class="visitar" id="link-github" href="https://github.com/biancaufworks-bit" target="_blank" rel="noopener">Visitar!</a>
+      </li>
+    </ul>
+
+    <p class="assinatura">feito com carinho por Bianca 💜 <span id="ano"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
