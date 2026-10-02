@@ -23,7 +23,8 @@ const CONFIG = {
   const fotos = Array.from(deck.querySelectorAll(".polaroid"));
   const posicoes = ["centro", "direita", "esquerda"];
   const camada = { centro: 3, direita: 2, esquerda: 1 };
-  const semMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // as animações rodam sempre, mesmo com "reduzir animações" ligado no computador
+  const semMovimento = false;
   let atual = 0;       // índice da foto que está no centro
   let animando = false;
 
@@ -184,7 +185,6 @@ const CONFIG = {
 // ---------- Seções deslizam suavemente ao aparecer na tela ----------
 (function revelarAoRolar() {
   if (!("IntersectionObserver" in window)) return;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const alvos = document.querySelectorAll(".secao-cabeca, .projetos, .caminho li, .contato-cabeca, .contatos");
   const observador = new IntersectionObserver((entradas) => {
     entradas.forEach((entrada) => {
