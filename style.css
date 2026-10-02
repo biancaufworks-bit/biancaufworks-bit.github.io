@@ -621,8 +621,3 @@ h1, h2, h3 {
   .caminho, .contatos, .trajetoria { grid-template-columns: 1fr; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *:not(.tema-bolinha):not(.tema-icone):not(.tema-switch),
-  *::before, *::after { animation: none !important; transition: none !important; }
-}
